@@ -1,13 +1,24 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Helmet from 'react-helmet'
-import Home from './views/Home'
-import About from './views/About'
-import NoMatch from './views/NoMatch'
 import Wrapper from './components/Wrapper'
 import Title from './components/Title'
 import Nav from './components/Nav'
 import NavLink from './components/NavLink'
+import Loadable from 'react-loadable';
+
+const Home = Loadable({
+  loader: () => import('./views/Home'),
+  loading: () => null
+})
+const About = Loadable({
+  loader: () => import('./views/About'),
+  loading: () => null
+})
+const NoMatch = Loadable({
+  loader: () => import('./views/NoMatch'),
+  loading: () => null
+})
 
 const title = 'You Are Doing Great'
 const routes = [
