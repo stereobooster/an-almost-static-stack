@@ -1,14 +1,12 @@
 import React from 'react'
-import { render } from 'react-snapshot'
 import App from './App'
 import './index.css'
 
-const rootEl = document.getElementById('root')
-render(<App />, rootEl)
+import { hydrate, render } from 'react-dom';
 
-if (module.hot) {
-  module.hot.accept('./App', () => {
-    const NextApp = require('./App').default
-    render(<NextApp />, rootEl)
-  })
+const rootElement = document.getElementById('root');
+if (rootElement.hasChildNodes()) {
+  hydrate(<App />, rootElement);
+} else {
+  render(<App />, rootElement);
 }
