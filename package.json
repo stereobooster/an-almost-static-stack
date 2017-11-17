@@ -24,6 +24,7 @@
     "deploy": "npm run build && surge -p build"
   },
   "reactSnap": {
-    "fixWebpackChunksIssue": true
+    "fixWebpackChunksIssue": true,
+    "preloadResources": true
   }
 }

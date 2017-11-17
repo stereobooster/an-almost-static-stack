@@ -15,6 +15,10 @@ const About = Loadable({
   loader: () => import('./views/About'),
   loading: () => null
 })
+const Countries = Loadable({
+  loader: () => import('./views/Countries'),
+  loading: () => null
+})
 const NoMatch = Loadable({
   loader: () => import('./views/NoMatch'),
   loading: () => null
@@ -31,6 +35,10 @@ const routes = [
     title: 'About',
     path: '/about',
     component: About
+  }, {
+    title: 'Countries',
+    path: '/countries',
+    component: Countries
   }
 ]
 
