@@ -23,15 +23,19 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build-react": "react-scripts build && react-snap && yarn run generate-sw",
-    "build": "node scripts/build-preact.js && react-snap && yarn run generate-sw",
+    "build-react": "react-scripts build && react-snap && yarn run generate-sw && yarn run generate-appcache",
+    "build": "node scripts/build-preact.js && react-snap && yarn run generate-sw && yarn run generate-appcache",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "generate-sw": "sw-precache --root=build --config scripts/sw-precache-config.js && uglifyjs build/service-worker.js -o build/service-worker.js",
+    "generate-appcache": "node scripts/generate-appcache",
     "deploy": "npm run build && firebase deploy"
   },
   "reactSnap": {
     "fixWebpackChunksIssue": true,
-    "preloadResources": true
+    "preloadResources": true,
+    "inlineCss": true,
+    "asyncJs": true,
+    "removeStyleTags": true
   }
 }
