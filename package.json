@@ -9,6 +9,8 @@
     "uglifyjs": "^2.4.11"
   },
   "dependencies": {
+    "preact": "^8.2.6",
+    "preact-compat": "^3.17.0",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
     "react-helmet": "^5.2.0",
@@ -20,7 +22,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && react-snap && yarn run generate-sw",
+    "build-react": "react-scripts build && react-snap && yarn run generate-sw",
+    "build": "node scripts/build-preact.js && react-snap && yarn run generate-sw",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "generate-sw": "sw-precache --root=build --config scripts/sw-precache-config.js && uglifyjs build/service-worker.js -o build/service-worker.js",
