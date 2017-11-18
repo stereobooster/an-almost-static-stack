@@ -9,6 +9,7 @@
     "uglifyjs": "^2.4.11"
   },
   "dependencies": {
+    "appcache-nanny": "^1.1.0",
     "preact": "^8.2.6",
     "preact-compat": "^3.17.0",
     "react": "^16.1.1",
