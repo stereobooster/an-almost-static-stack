@@ -3,7 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
+    "highland": "^2.11.1",
+    "level": "^2.0.1",
     "react-scripts": "1.0.17",
+    "readdirp": "^2.1.0",
+    "s3-sync-aws": "^1.1.1",
     "standard": "^10.0.3",
     "sw-precache": "^5.2.0",
     "uglifyjs": "^2.4.11"
@@ -29,6 +33,7 @@
     "eject": "react-scripts eject",
     "generate-sw": "sw-precache --root=build --config scripts/sw-precache-config.js && uglifyjs build/service-worker.js -o build/service-worker.js",
     "generate-appcache": "node scripts/generate-appcache",
+    "aws-deploy": "node scripts/aws-deploy.js",
     "deploy": "npm run build && firebase deploy"
   },
   "reactSnap": {

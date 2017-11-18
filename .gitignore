@@ -16,3 +16,4 @@ npm-debug.log
 
 .firebaserc
 firebase-debug.log
+scripts/cache
