@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Helmet from 'react-helmet'
+import Seo from '../components/Seo'
 import Page from '../components/Page'
 
 const CountriesRow = ({ country }) => (
@@ -65,7 +65,11 @@ class Countries extends Component {
       <Page>
         <h1>This is the <strong>Countries</strong> view.</h1>
         <LoadableCountriesTable { ...this.state } />
-        <Helmet title='Countries' />
+        <Seo
+          title="Countries"
+          description="Countries list."
+          path="/countries"
+        />
       </Page>
     )
   }

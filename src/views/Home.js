@@ -1,6 +1,6 @@
 import React from 'react'
-import Helmet from 'react-helmet'
 import Page from '../components/Page'
+import Seo from '../components/Seo'
 
 export default () => (
   <Page>
@@ -11,6 +11,10 @@ export default () => (
     <p>Ullamcorper enim morbi adipiscing ac lacinia vestibulum tempor a pulvinar mauris natoque litora lectus a senectus. Parturient a sagittis viverra consectetur convallis in auctor dapibus vestibulum facilisi parturient ullamcorper vulputate a ullamcorper pulvinar justo platea fermentum aptent. Lectus condimentum vestibulum ut faucibus vulputate a feugiat aliquet faucibus platea iaculis sed condimentum vulputate scelerisque a eu in mi ullamcorper scelerisque adipiscing et fames parturient mollis adipiscing varius.</p>
     <p>Donec et pulvinar mi elementum parturient penatibus id dui scelerisque adipiscing egestas urna pharetra praesent scelerisque. Ullamcorper quis hendrerit a elit mi sit dis vestibulum fringilla mi pulvinar in erat aptent vestibulum nisi a enim vestibulum parturient. Laoreet ad in aliquet magna accumsan donec fringilla tellus consectetur vulputate dui interdum nisl sociis aliquam sociis adipiscing quisque adipiscing et velit.</p>
     <p>Sit vitae id ullamcorper adipiscing adipiscing nunc a vitae litora dolor consectetur primis parturient ligula. Sit porttitor luctus hac eu purus parturient phasellus ullamcorper eros hac malesuada aliquet suspendisse duis laoreet cum augue proin consectetur feugiat a scelerisque taciti ullamcorper parturient. Ut vel parturient parturient consectetur vel eros quisque tellus etiam parturient integer eleifend quisque condimentum faucibus congue nisi facilisi quam a pharetra viverra montes. Ad magna a curae turpis auctor condimentum nulla massa ligula himenaeos tempor a integer condimentum integer.</p>
-    <Helmet title='Home' />
+    <Seo
+      title="Home"
+      description="Scelerisque venenatis nibh fames ad quam feugiat leo commodo vitae sed lacus."
+      path="/"
+    />
   </Page>
 )

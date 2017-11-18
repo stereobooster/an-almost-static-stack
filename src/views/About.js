@@ -1,5 +1,5 @@
 import React from 'react'
-import Helmet from 'react-helmet'
+import Seo from '../components/Seo'
 import Page from '../components/Page'
 
 export default () => (
@@ -11,6 +11,10 @@ export default () => (
     <p>Iaculis ac vestibulum ullamcorper parturient et dis a parturient congue enim ante nostra adipiscing lobortis a. Ullamcorper condimentum aliquet in commodo ligula velit himenaeos ad metus interdum eu fringilla mi vulputate eu platea sed integer. Gravida pulvinar per nisi fames nascetur ut metus ipsum leo scelerisque habitasse iaculis enim ad luctus molestie vestibulum a montes suspendisse nisi eget primis eleifend quisque dui parturient.</p>
     <p>Cum class adipiscing aenean primis sed a ultricies himenaeos senectus bibendum interdum vel eleifend at justo. At ultricies posuere ullamcorper turpis praesent quam curae convallis suspendisse nullam parturient consequat sem condimentum rutrum eget. Luctus turpis facilisi potenti condimentum consectetur euismod ut in eu ac fringilla pulvinar a magna. Nisi gravida eu quisque egestas adipiscing adipiscing magna nam integer suspendisse et cubilia parturient nisl ut in suscipit a sit dapibus vestibulum nec condimentum a a. Eros libero ac quis vestibulum potenti lorem a a consectetur facilisis porta ultrices at sodales. Vestibulum adipiscing iaculis velit lacus mollis consectetur scelerisque mattis sapien parturient porta bibendum ultricies id urna ligula gravida curae facilisis.</p>
     <p>A sem vel nec sodales mi vivamus senectus sed potenti a parturient nascetur tincidunt nisi pulvinar rhoncus a. Risus imperdiet taciti suspendisse facilisi a per metus cubilia varius a nostra adipiscing amet ultrices quisque ac mi a. Dictumst a ultrices mi a dignissim ad fermentum eget a nam et a blandit scelerisque. Taciti lorem tempor quam vestibulum dis habitasse vestibulum diam vel est ut proin dis auctor. Suscipit scelerisque orci magna interdum vel bibendum duis netus a consectetur dui magnis ac aliquet sem posuere tincidunt vestibulum.</p>
-    <Helmet title='About' />
+    <Seo
+      title="About"
+      description="Ante himenaeos a vestibulum dignissim cursus porta a amet blandit massa netus parturient."
+      path="/about"
+     />
   </Page>
 )
