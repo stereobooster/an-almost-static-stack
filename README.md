@@ -31,11 +31,9 @@ If you're not into [Yarn](https://yarnpkg.com/), `npm install`, `npm start` and 
 
 ![Surge waterfall](/images/surge-waterfall.png)
 
-**WARNING** Firebase works a bit better, but still super slow for static website
+**WARNING** Do not use **bare** S3 for website hosting (HTTP1, no compression, no HTTPS)
 
-![Firebase waterfall](/images/firebase-waterfall.png)
-
-**WARNING** Do not use **bare** S3 for website hosting (HTTP1, no compression, no HTTPS). Use S3 with Cloudflare or CloudFront.
+Hosting: use Firebase or S3 + CloudFront or S3 + Cloudflare. All of them have very cheap or free plans.
 
 ## create-react-app
 

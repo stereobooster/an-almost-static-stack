@@ -17,3 +17,4 @@ npm-debug.log
 .firebaserc
 firebase-debug.log
 scripts/cache
+yarn-error.log
