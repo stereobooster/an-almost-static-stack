@@ -1,5 +1,9 @@
 ![An Almost Static Stack](https://i.imgur.com/NStGYap.jpg)
 
+# Discalimaer
+
+This is my "training" repository. I put here every trick that is possible. It doesn't mean you should do the same. Be reasonable use only those techniques that you understand.
+
 # An Almost Static Stack
 
 This repo serves as a companion to the [tutorial of the same name, over on Medium](https://medium.com/superhighfives/).
@@ -7,7 +11,7 @@ This repo serves as a companion to the [tutorial of the same name, over on Mediu
 ## Getting started
 
 ``` shell
-git clone https://github.com/superhighfives/an-almost-static-stack.git
+git clone https://github.com/stereobooster/an-almost-static-stack.git
 cd an-almost-static-stack
 yarn install
 yarn start
@@ -30,6 +34,8 @@ If you're not into [Yarn](https://yarnpkg.com/), `npm install`, `npm start` and 
 **WARNING** Firebase works a bit better, but still super slow for static website
 
 ![Firebase waterfall](/images/firebase-waterfall.png)
+
+**WARNING** Do not use **bare** S3 for website hosting (HTTP1, no compression, no HTTPS). Use S3 with Cloudflare or CloudFront.
 
 ## create-react-app
 
