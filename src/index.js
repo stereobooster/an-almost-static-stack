@@ -2,7 +2,7 @@ import React from 'react'
 import { hydrate, render } from 'react-dom';
 import App from './App'
 import './index.css'
-// import registerServiceWorker from './registerServiceWorker'
+import registerServiceWorker from './registerServiceWorker'
 
 const rootElement = document.getElementById('root');
 if (rootElement.hasChildNodes()) {
@@ -11,4 +11,4 @@ if (rootElement.hasChildNodes()) {
   render(<App />, rootElement);
 }
 
-// registerServiceWorker();
+registerServiceWorker();

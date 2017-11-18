@@ -4,7 +4,9 @@
   "private": true,
   "devDependencies": {
     "react-scripts": "1.0.17",
-    "standard": "^10.0.3"
+    "standard": "^10.0.3",
+    "sw-precache": "^5.2.0",
+    "uglifyjs": "^2.4.11"
   },
   "dependencies": {
     "react": "^16.1.1",
@@ -18,9 +20,10 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && react-snap",
+    "build": "react-scripts build && react-snap && yarn run generate-sw",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
+    "generate-sw": "sw-precache --root=build --config scripts/sw-precache-config.js && uglifyjs build/service-worker.js -o build/service-worker.js",
     "deploy": "npm run build && firebase deploy"
   },
   "reactSnap": {

@@ -39,15 +39,16 @@ class Countries extends Component {
   }
 
   componentDidMount() {
-    if (window.snapStore && window.snapStore["/countryCodes.json"]) {
+    const url = "/api/countryCodes.json";
+    if (window.snapStore && window.snapStore[url]) {
       this.setState({
         state: "loaded",
-        countries: window.snapStore["/countryCodes.json"]["countryCodes"]
+        countries: window.snapStore[url]["countryCodes"]
       })
       return;
     }
 
-    fetch("/countryCodes.json").then(async (response) => {
+    fetch(url).then(async (response) => {
       const countries = (await response.json())["countryCodes"];
       this.setState({
         state: "loaded",
