@@ -4,8 +4,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
-const absoluteUrl = path => `https://example.com${path}`;
-const seoImageURL = file => `https://s3.amazonaws.com/example-site-assets/graphics/${file}`;
+const absoluteUrl = path => `https://yagd-9d9f8.firebaseapp.com${path}`;
+const seoImageURL = file => `https://yagd-9d9f8.firebaseapp.com/images/${file}`;
 
 const getMetaTags = ({
   title, description, url, contentType, published, updated, category, tags, twitter, image,
@@ -15,16 +15,16 @@ const getMetaTags = ({
     { itemprop: 'description', content: description },
     { name: 'description', content: description },
     { name: 'twitter:site', content: '@stereobooster' },
-    { name: 'twitter:title', content: `${title} | Example.com` },
+    { name: 'twitter:title', content: `${title} | yagd-9d9f8.firebaseapp.com` },
     { name: 'twitter:description', content: description },
     { name: 'twitter:creator', content: twitter || '@stereobooster' },
-    { name: 'og:title', content: `${title} | Example.com` },
+    { name: 'og:title', content: `${title} | yagd-9d9f8.firebaseapp.com` },
     { name: 'og:type', content: contentType },
     { name: 'og:url', content: url },
     { name: 'og:description', content: description },
-    { name: 'og:site_name', content: 'Example.com' },
+    { name: 'og:site_name', content: 'yagd-9d9f8.firebaseapp.com' },
     { name: 'og:locale', content: 'en_EN' },
-    { name: 'fb:app_id', content: '<FB App ID>' },
+    // { name: 'fb:app_id', content: '<FB App ID>' },
   ];
 
   if (published) metaTags.push({ name: 'article:published_time', content: published });

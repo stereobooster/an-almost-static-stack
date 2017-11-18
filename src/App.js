@@ -33,11 +33,11 @@ const routes = [
     exact: true
   }, {
     title: 'About',
-    path: '/about',
+    path: '/about/',
     component: About
   }, {
     title: 'Countries',
-    path: '/countries',
+    path: '/countries/',
     component: Countries
   }
 ]
