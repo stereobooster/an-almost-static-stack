@@ -6377,9 +6377,9 @@ react-side-effect@^1.1.0:
     exenv "^1.2.1"
     shallowequal "^0.2.2"
 
-react-snap@^0.10.0:
-  version "0.10.0"
-  resolved "https://registry.yarnpkg.com/react-snap/-/react-snap-0.10.0.tgz#c5f80f42ad21a1ca822230a863fc1920a7fa83d9"
+react-snap@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/react-snap/-/react-snap-1.0.0.tgz#3d62a8c13e27b44de57e541f90303294e9bf3035"
   dependencies:
     express "^4.16.1"
     express-history-api-fallback "^2.2.1"
