@@ -22,24 +22,25 @@
     "react-loadable": "^5.3.1",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.17",
-    "react-snap": "^1.0.0",
+    "react-snap": "^1.0.1",
     "styled-components": "^2.2.3"
   },
   "scripts": {
     "start": "react-scripts start",
     "build-react": "react-scripts build && react-snap && yarn run generate-sw && yarn run generate-appcache",
-    "build": "node scripts/build-preact.js && react-snap && yarn run generate-sw && yarn run generate-appcache",
+    "build-preact": "node scripts/build-preact.js && react-snap && yarn run generate-sw && yarn run generate-appcache",
+    "build": "yarn run build-react",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "generate-sw": "sw-precache --root=build --config scripts/sw-precache-config.js && uglifyjs build/service-worker.js -o build/service-worker.js",
     "generate-appcache": "node scripts/generate-appcache",
     "aws-deploy": "node scripts/aws-deploy.js",
-    "deploy": "npm run build && firebase deploy"
+    "deploy": "yarn run build-react && firebase deploy"
   },
   "reactSnap": {
     "cacheAjaxRequests": true,
     "inlineCss": true,
     "asyncJs": true,
-    "removeStyleTags": true
+    "removeStyleTags": false
   }
 }
