@@ -5,10 +5,10 @@
   "devDependencies": {
     "highland": "^2.11.1",
     "level": "^2.0.1",
+    "prettier": "^1.8.2",
     "react-scripts": "1.0.17",
     "readdirp": "^2.1.0",
     "s3-sync-aws": "^1.1.1",
-    "standard": "^10.0.3",
     "sw-precache": "^5.2.0",
     "uglifyjs": "^2.4.11"
   },
@@ -27,15 +27,19 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build-react": "react-scripts build && react-snap && yarn run generate-sw && yarn run generate-appcache",
-    "build-preact": "node scripts/build-preact.js && react-snap && yarn run generate-sw && yarn run generate-appcache",
+    "build-react":
+      "react-scripts build && react-snap && yarn run generate-sw && yarn run generate-appcache",
+    "build-preact":
+      "node scripts/build-preact.js && react-snap && yarn run generate-sw && yarn run generate-appcache",
     "build": "yarn run build-react",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "generate-sw": "sw-precache --root=build --config scripts/sw-precache-config.js && uglifyjs build/service-worker.js -o build/service-worker.js",
+    "generate-sw":
+      "sw-precache --root=build --config scripts/sw-precache-config.js && uglifyjs build/service-worker.js -o build/service-worker.js",
     "generate-appcache": "node scripts/generate-appcache",
     "aws-deploy": "node scripts/aws-deploy.js",
-    "deploy": "yarn run build-react && firebase deploy"
+    "deploy": "yarn run build-react && firebase deploy",
+    "prettier": "prettier --write {*,scripts/*,src/*}.{js,json,css}"
   },
   "reactSnap": {
     "cacheAjaxRequests": true,

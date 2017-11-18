@@ -7,9 +7,11 @@ module.exports = {
   ],
   stripPrefix: "build",
   publicPath: ".",
-  runtimeCaching: [{
-    urlPattern: /api/,
-    handler: "fastest"
-  }],
-  navigateFallback: '/200.html'
+  runtimeCaching: [
+    {
+      urlPattern: /api/,
+      handler: "fastest"
+    }
+  ],
+  navigateFallback: "/200.html"
 };
