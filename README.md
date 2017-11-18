@@ -27,7 +27,7 @@ Voila!
 
 If you're not into [Yarn](https://yarnpkg.com/), `npm install`, `npm start` and `npm run deploy` all work as well.
 
-**WARNING** Do not use Surge. It uses HTTP1.1 without Keep-Alive
+**WARNING** Do not use **bare** Surge. It uses HTTP1.1 without Keep-Alive
 
 ![Surge waterfall](/images/surge-waterfall.png)
 

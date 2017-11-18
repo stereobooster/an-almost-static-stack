@@ -32,23 +32,38 @@ const LoadableCountriesTable = ({state, countries}) => {
 class Countries extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      countries: null,
-      state: "loading"
-    };
-  }
+    const url = props.url || "/api/countryCodes.json";
 
-  componentDidMount() {
-    const url = "/api/countryCodes.json";
     if (window.snapStore && window.snapStore[url]) {
-      this.setState({
+      this.state = {
+        url,
         state: "loaded",
         countries: window.snapStore[url]["countryCodes"]
-      })
-      return;
+      }
+    } else {
+      this.state = {
+        url,
+        countries: null,
+        state: "loading"
+      };
     }
+  }
 
-    fetch(url).then(async (response) => {
+  // componentWillReceiveProps(nextProps) {
+  //   if (nextProps.url !== this.state.url) {
+  //     this.setState({
+  //       url: nextProps.url,
+  //       countries: null,
+  //       state: "loading"
+  //     });
+  //   }
+  // }
+
+  componentDidMount() {
+    console.log('componentDidMount', this.state.state)
+    if (this.state.state !== "loading") return;
+
+    fetch(this.state.url).then(async (response) => {
       const countries = (await response.json())["countryCodes"];
       this.setState({
         state: "loaded",
