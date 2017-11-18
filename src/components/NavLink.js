@@ -15,10 +15,13 @@ const NavLink = styled.div`
   }
 `
 
-export default ({path, exact, ...props}) => (
+export default ({path, exact, reload, ...props}) => (
   <Route path={path} exact={exact} children={({match}) => (
     <NavLink active={match}>
-      <Link to={path}>{props.title}</Link>
+      { reload ?
+          <a href={path} reload={true}>{props.title}</a> :
+          <Link to={path}>{props.title}</Link>
+      }
     </NavLink>
   )} />
 )

@@ -43,6 +43,30 @@ const routes = [
 ]
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      serviceWorkerState: null
+    };
+    this.onServiceWorkerNotification = this.onServiceWorkerNotification.bind(this);
+  }
+
+  onServiceWorkerNotification(e) {
+    this.setState({
+      serviceWorkerState: e.detail.state
+    })
+  }
+
+  componentWillMount() {
+    let elem = window.document;
+    elem.addEventListener('serviceWorkerNotification', this.onServiceWorkerNotification, false);
+  }
+
+  componentWillUnmount() {
+    let elem = window.document;
+    elem.removeEventListener('serviceWorkerNotification', this.onServiceWorkerNotification, false);
+  }
+
   render () {
     return (
       <Router>
@@ -52,7 +76,7 @@ class App extends Component {
           <Nav>
             <h1>Navigation</h1>
             {routes.map((route, i) => (
-              <NavLink key={i} {...route} />
+              <NavLink key={i} {...route} reload={ this.state.serviceWorkerState === 'new' } />
             ))}
           </Nav>
           <Switch>
