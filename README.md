@@ -45,3 +45,5 @@ You can find more information [here](https://github.com/facebookincubator/create
 
 - loadable triggers redraws, see [images/visual-progress.png](images/visual-progress.png)
 - create "shell.html"
+- [perfect 404](https://alistapart.com/article/perfect404)
+
