@@ -40,3 +40,8 @@ Hosting: use Firebase or S3 + CloudFront or S3 + Cloudflare. All of them have ve
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 You can find more information [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
+
+## TODO
+
+- loadable triggers redraws, see [images/visual-progress.png](images/visual-progress.png)
+- create "shell.html"
