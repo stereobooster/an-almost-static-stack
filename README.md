@@ -44,7 +44,6 @@ You can find more information [here](https://github.com/facebookincubator/create
 ## TODO
 
 - Migrate structure to be similar to cra-universal, to be able compare react-snap and cra-universal.
-- `react-loadable` triggers redraw, see [images/visual-progress.png](images/visual-progress.png)
 - [perfect 404](https://alistapart.com/article/perfect404)
 - placeholder examples: [overview](https://medium.freecodecamp.org/using-svg-as-placeholders-more-image-loading-techniques-bed1b810ab2c), [lqip](https://github.com/zouhir/lqip), [sqip](https://github.com/technopagan/sqip), [dominant color](https://github.com/lokesh/color-thief), [cloud off icon](https://material.io/icons/#ic_cloud_off), [react-waypoint](https://github.com/brigade/react-waypoint), [offline states](https://material.io/guidelines/patterns/offline-states.html)
 - try out [workbox](https://github.com/GoogleChrome/workbox) instead of sw-precache, explore options for offline storages, explore offline reporting for GA
