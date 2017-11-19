@@ -43,7 +43,8 @@ You can find more information [here](https://github.com/facebookincubator/create
 
 ## TODO
 
-- loadable triggers redraws, see [images/visual-progress.png](images/visual-progress.png)
+- `react-loadable` triggers redraw, see [images/visual-progress.png](images/visual-progress.png)
 - create "shell.html"
 - [perfect 404](https://alistapart.com/article/perfect404)
+- placeholder examples: [overview](https://medium.freecodecamp.org/using-svg-as-placeholders-more-image-loading-techniques-bed1b810ab2c), [lqip](https://github.com/zouhir/lqip), [sqip](https://github.com/technopagan/sqip), [dominant color](https://github.com/lokesh/color-thief), [cloud off icon](https://material.io/icons/#ic_cloud_off), [react-waypoint](https://github.com/brigade/react-waypoint), [offline states](https://material.io/guidelines/patterns/offline-states.html)
 
