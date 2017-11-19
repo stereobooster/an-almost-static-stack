@@ -6157,9 +6157,9 @@ react-side-effect@^1.1.0:
     exenv "^1.2.1"
     shallowequal "^0.2.2"
 
-react-snap@1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/react-snap/-/react-snap-1.0.3.tgz#0257db304c717ad3e624ec32e939d9186600f205"
+"react-snap@https://github.com/stereobooster/react-snap.git#fix-for-46":
+  version "1.0.7"
+  resolved "https://github.com/stereobooster/react-snap.git#a455b50dacd0853cc402b18c832f2093d4f49592"
   dependencies:
     clean-css "^4.1.9"
     express "^4.16.1"
