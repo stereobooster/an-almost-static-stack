@@ -9,19 +9,27 @@ import Loadable from "react-loadable";
 
 const Home = Loadable({
   loader: () => import("./views/Home"),
-  loading: () => null
+  loading: () => null,
+  modules: ["./views/Home"],
+  webpack: () => [require.resolveWeak("./views/Home")]
 });
 const About = Loadable({
   loader: () => import("./views/About"),
-  loading: () => null
+  loading: () => null,
+  modules: ["./views/About"],
+  webpack: () => [require.resolveWeak("./views/About")]
 });
 const Countries = Loadable({
   loader: () => import("./views/Countries"),
-  loading: () => null
+  loading: () => null,
+  modules: ["./views/Countries"],
+  webpack: () => [require.resolveWeak("./views/Countries")]
 });
 const NoMatch = Loadable({
   loader: () => import("./views/NoMatch"),
-  loading: () => null
+  loading: () => null,
+  modules: ["./views/NoMatch"],
+  webpack: () => [require.resolveWeak("./views/NoMatch")]
 });
 
 const title = "You Are Doing Great";
@@ -97,7 +105,11 @@ class App extends Component {
           </Nav>
           <Switch>
             {routes.map((route, i) => <Route key={i} {...route} />)}
-            <Route key={"/shell.html"} path="/shell.html" component={() => null} />
+            <Route
+              key={"/shell.html"}
+              path="/shell.html"
+              component={() => null}
+            />
             <Route key={"/404.html"} component={NoMatch} />
           </Switch>
         </Wrapper>
