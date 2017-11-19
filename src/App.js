@@ -97,7 +97,8 @@ class App extends Component {
           </Nav>
           <Switch>
             {routes.map((route, i) => <Route key={i} {...route} />)}
-            <Route component={NoMatch} />
+            <Route key={"/shell.html"} path="/shell.html" component={() => null} />
+            <Route key={"/404.html"} component={NoMatch} />
           </Switch>
         </Wrapper>
       </Router>

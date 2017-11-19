@@ -2,7 +2,7 @@ module.exports = {
   staticFileGlobs: [
     "build/static/css/*.css",
     "build/static/js/*.js",
-    "build/200.html",
+    "build/shell.html",
     "build/index.html"
   ],
   stripPrefix: "build",
@@ -13,5 +13,5 @@ module.exports = {
       handler: "fastest"
     }
   ],
-  navigateFallback: "/200.html"
+  navigateFallback: "/shell.html"
 };
