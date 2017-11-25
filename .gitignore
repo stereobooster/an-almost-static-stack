@@ -18,3 +18,4 @@ npm-debug.log
 firebase-debug.log
 scripts/cache
 yarn-error.log
+firebase.json
