@@ -28,7 +28,7 @@
     "build-react": "react-scripts build",
     "build-preact": "node scripts/build-preact.js",
     "build":
-      "yarn run build-react && react-snap && yarn run generate-sw && yarn run generate-appcache",
+      "yarn run build-preact && react-snap && yarn run generate-sw && yarn run generate-appcache",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "generate-sw":
@@ -43,6 +43,7 @@
     "inlineCss": true,
     "asyncScriptTags": false,
     "removeStyleTags": false,
-    "include": ["/shell.html"]
+    "include": ["/shell.html"],
+    "sourceMaps": true
   }
 }
