@@ -1,12 +1,4 @@
-import styled from 'styled-components'
+import React from "react";
+import { Page } from "./Page.module.css";
 
-export default styled.div`
-  h1 {
-    font-size: 5vmin;
-    font-weight: normal;
-    color: #0000ff;
-  }
-  p {
-    font-size: 0.9375rem;
-  }
-`
+export default props => <div className={Page}>{props.children}</div>;
