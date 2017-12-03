@@ -1,0 +1,24 @@
+.NavLink a {
+  transition: color 0.2s, border-bottom-color 0.2s;
+  color: #0000ff;
+  text-decoration: none;
+  border-bottom: 2px solid;
+  border-bottom-color: rgba(0, 0, 255, 0.1);
+}
+
+.NavLink a:hover,
+.NavLink a:active,
+.NavLink a:focus {
+  color: #0000ff;
+}
+
+.active a {
+  color: #666;
+  border-bottom-color: transparent;
+}
+
+.active a:hover,
+.active a:active,
+.active a:focus {
+  color: #222;
+}

@@ -1,0 +1,9 @@
+.Page h1 {
+  font-size: 5vmin;
+  font-weight: normal;
+  color: #0000ff;
+}
+
+.Page p {
+  font-size: 0.9375rem;
+}

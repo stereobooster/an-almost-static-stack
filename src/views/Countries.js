@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
-import Seo from '../components/Seo'
-import Page from '../components/Page'
+import React, { Component } from "react";
+import Seo from "../components/Seo";
+import Page from "../components/Page";
 
 const CountriesRow = ({ country }) => (
   <tr>
@@ -8,26 +8,28 @@ const CountriesRow = ({ country }) => (
     <td>{country.country_name}</td>
     <td>{country.dialling_code}</td>
   </tr>
-)
+);
 
 const CountriesTable = ({ countries }) => (
   <table>
     <tbody>
-    { countries.map(country => <CountriesRow key={country.country_code} country={country} />) }
+      {countries.map(country => (
+        <CountriesRow key={country.country_code} country={country} />
+      ))}
     </tbody>
   </table>
-)
+);
 
-const LoadableCountriesTable = ({state, countries}) => {
+const LoadableCountriesTable = ({ state, countries }) => {
   switch (state) {
     case "loading":
       return <div>Loading</div>;
     case "loaded":
-      return <CountriesTable countries={ countries } />;
+      return <CountriesTable countries={countries} />;
     default:
       return <div>Error happened</div>;
   }
-}
+};
 
 class Countries extends Component {
   constructor(props) {
@@ -39,7 +41,7 @@ class Countries extends Component {
         url,
         state: "loaded",
         countries: window.snapStore[url]["countryCodes"]
-      }
+      };
     } else {
       this.state = {
         url,
@@ -60,35 +62,39 @@ class Countries extends Component {
   // }
 
   componentDidMount() {
-    console.log('componentDidMount', this.state.state)
+    console.log("componentDidMount", this.state.state);
     if (this.state.state !== "loading") return;
 
-    fetch(this.state.url).then(async (response) => {
-      const countries = (await response.json())["countryCodes"];
-      this.setState({
-        state: "loaded",
-        countries
+    fetch(this.state.url)
+      .then(async response => {
+        const countries = (await response.json())["countryCodes"];
+        this.setState({
+          state: "loaded",
+          countries
+        });
       })
-    }).catch(() => {
-      this.setState({
-        state: "error"
-      })
-    })
+      .catch(() => {
+        this.setState({
+          state: "error"
+        });
+      });
   }
 
   render() {
     return (
       <Page>
-        <h1>This is the <strong>Countries</strong> view.</h1>
-        <LoadableCountriesTable { ...this.state } />
+        <h1>
+          This is the <strong>Countries</strong> view.
+        </h1>
+        <LoadableCountriesTable {...this.state} />
         <Seo
           title="Countries"
           description="Countries list."
           path="/countries"
         />
       </Page>
-    )
+    );
   }
 }
 
-export default Countries
+export default Countries;

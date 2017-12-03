@@ -1,10 +1,4 @@
-import styled from 'styled-components'
+import React from "react";
+import { Wrapper } from "./Wrapper.module.css";
 
-export default styled.div`
-  padding: 4rem 1rem;
-  margin: 0 auto;
-  @media (min-width: 801px) {
-    width: 80vw;
-  }
-  max-width: 1140px;
-`
+export default props => <div className={Wrapper}>{props.children}</div>;

@@ -1,0 +1,11 @@
+.Wrapper {
+  padding: 4rem 1rem;
+  margin: 0 auto;
+  max-width: 1140px;
+}
+
+@media (min-width: 801px) {
+  .Wrapper {
+    width: 80vw;
+  }
+}
