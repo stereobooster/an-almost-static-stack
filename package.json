@@ -4,6 +4,7 @@
   "private": true,
   "devDependencies": {
     "react-scripts": "1.0.17",
+    "react-snap": "^1.1.1",
     "standard": "^10.0.3",
     "sw-precache": "^5.2.0",
     "uglifyjs": "^2.4.11"
@@ -15,16 +16,18 @@
     "react-helmet": "^5.2.0",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.17",
-    "react-snapshot": "^1.3.0",
     "styled-components": "^2.2.3"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && react-snapshot && yarn run generate-sw && yarn run generate-appcache",
+    "build": "react-scripts build && react-snap && yarn run generate-sw && yarn run generate-appcache",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "deploy": "npm run build && firebase deploy",
     "generate-sw": "sw-precache --root=build --config scripts/sw-precache-config.js && uglifyjs build/service-worker.js -o build/service-worker.js",
     "generate-appcache": "node scripts/generate-appcache"
+  },
+  "reactSnap": {
+    "inlineCss": true
   }
 }
