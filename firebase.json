@@ -3,6 +3,15 @@
     "public": "build",
     "headers": [
       {
+        "source": "service-worker.js",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=0"
+          }
+        ]
+      },
+      {
         "source": "static/**/*.@(css|js|map)",
         "headers": [
           {
