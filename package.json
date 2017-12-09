@@ -20,6 +20,6 @@
     "build": "react-scripts build && react-snapshot",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "deploy": "npm run build && surge -p build"
+    "deploy": "npm run build && firebase deploy"
   }
 }

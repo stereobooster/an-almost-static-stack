@@ -1,0 +1,16 @@
+{
+  "hosting": {
+    "public": "build",
+    "headers": [
+      {
+        "source": "static/**/*.@(css|js|map)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=31536000"
+          }
+        ]
+      }
+    ]
+  }
+}
