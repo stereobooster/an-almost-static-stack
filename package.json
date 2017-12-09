@@ -4,7 +4,7 @@
   "private": true,
   "devDependencies": {
     "react-scripts": "1.0.17",
-    "react-snap": "^1.1.1",
+    "react-snap": "^1.2.0",
     "standard": "^10.0.3",
     "sw-precache": "^5.2.0",
     "uglifyjs": "^2.4.11"
@@ -23,11 +23,13 @@
     "build": "react-scripts build && react-snap && yarn run generate-sw && yarn run generate-appcache",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "deploy": "npm run build && firebase deploy",
+    "deploy": "npm run build && yarn run generate-fb && firebase deploy",
     "generate-sw": "sw-precache --root=build --config scripts/sw-precache-config.js && uglifyjs build/service-worker.js -o build/service-worker.js",
-    "generate-appcache": "node scripts/generate-appcache"
+    "generate-appcache": "node scripts/generate-appcache",
+    "generate-fb": "node scripts/add-push-headers.js"
   },
   "reactSnap": {
-    "inlineCss": true
+    "inlineCss": true,
+    "http2PushManifest": true
   }
 }

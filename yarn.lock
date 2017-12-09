@@ -5703,9 +5703,9 @@ react-side-effect@^1.1.0:
     exenv "^1.2.1"
     shallowequal "^0.2.2"
 
-react-snap@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/react-snap/-/react-snap-1.1.1.tgz#8957beb872d3da24422a7942221bd66ddd349bd8"
+react-snap@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/react-snap/-/react-snap-1.2.0.tgz#a5d6865aa2ecf48f704b1d3823d2bc81886ba682"
   dependencies:
     clean-css "^4.1.9"
     express "^4.16.1"
