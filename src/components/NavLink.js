@@ -1,19 +1,12 @@
-import React from 'react'
-import { Route, Link } from 'react-router-dom'
-import styled from 'styled-components'
+import React from "react";
+import { Route, Link } from "react-router-dom";
+import styles from "./NavLink.module.css";
 
-const NavLink = styled.div`
-  a {
-    transition: color 0.2s, border-bottom-color 0.2s;
-    color: ${props => props.active ? '#0000ff' : '#666'};
-    text-decoration: none;
-    border-bottom: 2px solid;
-    border-bottom-color: ${props => props.active ? 'rgba(0, 0, 255, 0.1)' : 'transparent'};
-    &:hover, &:active, &:focus {
-      color: ${props => props.active ? '#0000ff' : '#222'};
-    }
-  }
-`
+const NavLink = props => (
+  <div className={`${styles.NavLink} ${props.active ? styles.active : ""}`}>
+    {props.children}
+  </div>
+);
 
 export default ({path, exact, ...props}) => (
   <Route path={path} exact={exact} children={({match}) => (

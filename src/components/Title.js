@@ -1,7 +1,4 @@
-import styled from 'styled-components'
+import React from "react";
+import { Title } from "./Title.module.css";
 
-export default styled.h1`
-  font-size: 10vmin;
-  line-height: 1em;
-  font-weight: bold;
-`
+export default props => <h1 className={Title}>{props.children}</h1>;

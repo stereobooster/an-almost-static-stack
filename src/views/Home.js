@@ -13,4 +13,4 @@ export default () => (
     <p>Sit vitae id ullamcorper adipiscing adipiscing nunc a vitae litora dolor consectetur primis parturient ligula. Sit porttitor luctus hac eu purus parturient phasellus ullamcorper eros hac malesuada aliquet suspendisse duis laoreet cum augue proin consectetur feugiat a scelerisque taciti ullamcorper parturient. Ut vel parturient parturient consectetur vel eros quisque tellus etiam parturient integer eleifend quisque condimentum faucibus congue nisi facilisi quam a pharetra viverra montes. Ad magna a curae turpis auctor condimentum nulla massa ligula himenaeos tempor a integer condimentum integer.</p>
     <Helmet title='Home' />
   </Page>
-)
+);
