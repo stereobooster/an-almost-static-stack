@@ -23,7 +23,7 @@
     "build": "yarn run preact && react-snap && yarn run generate-sw && yarn run generate-appcache",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "deploy": "npm run build && yarn run generate-fb && firebase deploy",
+    "deploy": "npm run build && firebase deploy",
     "generate-sw": "sw-precache --root=build --config scripts/sw-precache-config.js && uglifyjs build/service-worker.js -o build/service-worker.js",
     "generate-appcache": "node scripts/generate-appcache",
     "generate-fb": "node scripts/add-push-headers.js",
@@ -32,7 +32,6 @@
   },
   "reactSnap": {
     "inlineCss": true,
-    "http2PushManifest": true,
-    "asyncScriptTags": true
+    "removeScriptTags": true
   }
 }
