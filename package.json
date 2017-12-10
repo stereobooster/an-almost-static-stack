@@ -20,7 +20,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "yarn run preact && react-snap && yarn run generate-sw && yarn run generate-appcache",
+    "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "deploy": "npm run build && firebase deploy",
@@ -28,7 +28,7 @@
     "generate-appcache": "node scripts/generate-appcache",
     "generate-fb": "node scripts/add-push-headers.js",
     "preact": "node scripts/build-preact.js",
-    "start": "react-scripts build"
+    "react": "react-scripts build"
   },
   "reactSnap": {
     "inlineCss": true,
