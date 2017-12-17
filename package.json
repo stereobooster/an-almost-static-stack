@@ -6,7 +6,7 @@
     "highland": "^2.11.1",
     "level": "^2.0.1",
     "prettier": "^1.8.2",
-    "react-snap": "^1.1.1",
+    "react-snap": "1.4.0",
     "readdirp": "^2.1.0",
     "s3-sync-aws": "^1.1.1",
     "sw-precache": "^5.2.0",
@@ -43,7 +43,6 @@
     "inlineCss": true,
     "asyncScriptTags": false,
     "removeStyleTags": false,
-    "include": ["/shell.html"],
-    "sourceMaps": true
+    "include": ["/shell.html"]
   }
 }

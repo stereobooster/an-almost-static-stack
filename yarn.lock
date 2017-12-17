@@ -5691,9 +5691,9 @@ react-side-effect@^1.1.0:
     exenv "^1.2.1"
     shallowequal "^0.2.2"
 
-react-snap@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/react-snap/-/react-snap-1.1.1.tgz#8957beb872d3da24422a7942221bd66ddd349bd8"
+react-snap@1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/react-snap/-/react-snap-1.4.0.tgz#eee141f54b33d0317c1141dbe3d5454d98969a14"
   dependencies:
     clean-css "^4.1.9"
     express "^4.16.1"
@@ -5704,7 +5704,7 @@ react-snap@^1.1.1:
     mkdirp "^0.5.1"
     puppeteer "^0.11.0"
     serve-static "^1.13.1"
-    sourcemapped-stacktrace-node "^2.0.4"
+    sourcemapped-stacktrace-node "^2.1.5"
 
 react@^16.1.1:
   version "16.1.1"
@@ -6325,9 +6325,9 @@ source-map@^0.6.1, source-map@~0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
 
-sourcemapped-stacktrace-node@^2.0.4:
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/sourcemapped-stacktrace-node/-/sourcemapped-stacktrace-node-2.0.4.tgz#63377c3459823b52662850638750ac8cb107ed5d"
+sourcemapped-stacktrace-node@^2.1.5:
+  version "2.1.5"
+  resolved "https://registry.yarnpkg.com/sourcemapped-stacktrace-node/-/sourcemapped-stacktrace-node-2.1.5.tgz#b9513da232941ad34d22fef949f708e514ffb054"
   dependencies:
     es6-promise "^4.1.1"
     isomorphic-fetch "^2.2.1"
@@ -6750,9 +6750,9 @@ ua-parser-js@^0.7.9:
   version "0.7.12"
   resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.12.tgz#04c81a99bdd5dc52263ea29d24c6bf8d4818a4bb"
 
-uglify-js@3.2.x, uglify-js@^3.0.13:
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.2.1.tgz#d6427fd45a25fefc5d196689c0c772a6915e10fe"
+uglify-js@3.2.x:
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.2.2.tgz#870e4b34ed733d179284f9998efd3293f7fd73f6"
   dependencies:
     commander "~2.12.1"
     source-map "~0.6.1"
@@ -6765,6 +6765,13 @@ uglify-js@^2.6, uglify-js@^2.8.29:
     yargs "~3.10.0"
   optionalDependencies:
     uglify-to-browserify "~1.0.0"
+
+uglify-js@^3.0.13:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.2.1.tgz#d6427fd45a25fefc5d196689c0c772a6915e10fe"
+  dependencies:
+    commander "~2.12.1"
+    source-map "~0.6.1"
 
 uglify-to-browserify@~1.0.0:
   version "1.0.2"
