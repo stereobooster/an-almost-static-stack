@@ -21,3 +21,4 @@ Read more [here](https://github.com/stereobooster/react-snap/blob/master/doc/an-
 - [big list of head tags](https://github.com/joshbuchea/HEAD)
 - [target modern browsers](https://philipwalton.com/articles/deploying-es2015-code-in-production-today/)
 - explore [hnpwa](https://hnpwa.com/) for more ideas
+- improve sw-precache-config.js, use [c-r-a webpack.config.prod](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/config/webpack.config.prod.js) as an reference
