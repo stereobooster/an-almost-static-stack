@@ -7,7 +7,7 @@
     "level": "^2.0.1",
     "prettier": "^1.8.2",
     "react-scripts": "^1.0.17",
-    "react-snap": "^1.2.0",
+    "react-snap": "https://github.com/stereobooster/react-snap.git#jsdom",
     "readdirp": "^2.1.0",
     "s3-sync-aws": "^1.1.1",
     "sw-precache": "^5.2.0",
@@ -46,6 +46,8 @@
     "asyncScriptTags": false,
     "removeStyleTags": false,
     "http2PushManifest": true,
-    "include": ["/shell.html"]
+    "include": ["/shell.html"],
+    "destination": "tmp",
+    "concurrency": 1
   }
 }
