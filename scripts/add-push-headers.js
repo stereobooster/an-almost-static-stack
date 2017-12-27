@@ -11,7 +11,12 @@ const path = require("path");
 // error Command failed with exit code 1.
 const http2PushManifest = JSON.parse(
   fs.readFileSync(path.join(__dirname, HTTP2_PUSH_MANIFEST))
-).filter(x => x.source !== "");
+).map(x => {
+  if (x.source === "") {
+    x.source = "/";
+  }
+  return x;
+});
 
 const firebaseBasicConfig = JSON.parse(
   fs.readFileSync(path.join(__dirname, FIREBASE_BASIC_CONFIG))

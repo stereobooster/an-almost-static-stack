@@ -15,13 +15,13 @@
   },
   "dependencies": {
     "appcache-nanny": "^1.1.0",
+    "loadable-components": "^0.4.0",
     "preact": "^8.2.6",
     "preact-compat": "^3.17.0",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
     "react-helmet": "^5.2.0",
     "react-router-dom": "^4.2.2",
-    "loadable-components": "^0.4.0",
     "styled-components": "^2.2.3"
   },
   "scripts": {
