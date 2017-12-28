@@ -7,18 +7,66 @@ import Nav from "./components/Nav";
 import NavLink from "./components/NavLink";
 import loadable from "loadable-components";
 
-const Home = loadable(() => import("./views/Home"), {
-  LoadingComponent: () => null
-});
-const About = loadable(() => import("./views/About"), {
-  LoadingComponent: () => null
-});
-const Countries = loadable(() => import("./views/Countries"), {
-  LoadingComponent: () => null
-});
-const NoMatch = loadable(() => import("./views/NoMatch"), {
-  LoadingComponent: () => null
-});
+const Home = loadable(
+  () => {
+    const x = import("./views/Home");
+    console.log(1);
+    x.then(y => console.log(y));
+    console.log(2);
+    return x;
+  },
+  {
+    LoadingComponent: () => {
+      console.log("LoadingComponent: ./views/Home");
+      return null;
+    }
+  }
+);
+const About = loadable(
+  () => {
+    const x = import("./views/About");
+    console.log(1);
+    x.then(y => console.log(y));
+    console.log(2);
+    return x;
+  },
+  {
+    LoadingComponent: () => {
+      console.log("LoadingComponent: ./views/About");
+      return null;
+    }
+  }
+);
+const Countries = loadable(
+  () => {
+    const x = import("./views/Countries");
+    console.log(1);
+    x.then(y => console.log(y));
+    console.log(2);
+    return x;
+  },
+  {
+    LoadingComponent: () => {
+      console.log("LoadingComponent: ./views/Countries");
+      return null;
+    }
+  }
+);
+const NoMatch = loadable(
+  () => {
+    const x = import("./views/NoMatch");
+    console.log(1);
+    x.then(y => console.log(y));
+    console.log(2);
+    return x;
+  },
+  {
+    LoadingComponent: () => {
+      console.log("LoadingComponent: ./views/NoMatch");
+      return null;
+    }
+  }
+);
 
 const title = "You Are Doing Great";
 const routes = [

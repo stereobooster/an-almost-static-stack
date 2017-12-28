@@ -3,8 +3,8 @@ import { hydrate, render } from "react-dom";
 // import { render } from 'react-dom';
 import App from "./App";
 import "./index.css";
-import registerServiceWorker from "./registerServiceWorker";
-// import { unregister } from "./registerServiceWorker";
+// import registerServiceWorker from "./registerServiceWorker";
+import { unregister } from "./registerServiceWorker";
 import { BrowserRouter } from "react-router-dom";
 
 import { loadComponents } from "loadable-components";
@@ -29,5 +29,5 @@ if (rootElement.hasChildNodes()) {
 }
 
 // render(<App />, rootElement);
-registerServiceWorker();
-// unregister();
+// registerServiceWorker();
+unregister();
