@@ -99,6 +99,10 @@ class App extends Component {
     );
   }
 
+  componentDidMount() {
+    console.log('componentDidMount: App');
+  }
+
   onServiceWorkerNotification(e) {
     this.setState({
       serviceWorkerState: e.detail.state
