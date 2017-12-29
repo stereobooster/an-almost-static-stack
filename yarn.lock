@@ -6169,9 +6169,9 @@ react-side-effect@^1.1.0:
     exenv "^1.2.1"
     shallowequal "^0.2.2"
 
-react-snap@^1.4.1:
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/react-snap/-/react-snap-1.4.1.tgz#b0e04e6f3f72f13036e94e79728f08c2390f9299"
+react-snap@^1.6.0:
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/react-snap/-/react-snap-1.6.0.tgz#6c07620e78aab741c1ddc80fef293073914eb22e"
   dependencies:
     clean-css "^4.1.9"
     express "^4.16.1"
@@ -6182,7 +6182,7 @@ react-snap@^1.4.1:
     mkdirp "^0.5.1"
     puppeteer "^0.11.0"
     serve-static "^1.13.1"
-    sourcemapped-stacktrace-node "^2.1.5"
+    sourcemapped-stacktrace-node "^2.1.6"
 
 react@^16.1.1:
   version "16.1.1"
@@ -6887,9 +6887,9 @@ source-map@~0.2.0:
   dependencies:
     amdefine ">=0.0.4"
 
-sourcemapped-stacktrace-node@^2.1.5:
-  version "2.1.5"
-  resolved "https://registry.yarnpkg.com/sourcemapped-stacktrace-node/-/sourcemapped-stacktrace-node-2.1.5.tgz#b9513da232941ad34d22fef949f708e514ffb054"
+sourcemapped-stacktrace-node@^2.1.6:
+  version "2.1.6"
+  resolved "https://registry.yarnpkg.com/sourcemapped-stacktrace-node/-/sourcemapped-stacktrace-node-2.1.6.tgz#7c8d8270d815c213e52f94225b58bf27baaaeb3c"
   dependencies:
     es6-promise "^4.1.1"
     isomorphic-fetch "^2.2.1"
