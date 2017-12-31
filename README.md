@@ -8,6 +8,18 @@ This is my "training" repository. I put here every trick that is possible. It do
 
 This repo serves as a companion to the [tutorial of the same name, over on Medium](https://medium.com/superhighfives/).
 
+## Heroku deployment
+
+```
+heroku create
+heroku config:set NPM_CONFIG_PRODUCTION=false
+heroku buildpacks:add https://github.com/jontewks/puppeteer-heroku-buildpack.git
+heroku buildpacks:add heroku/nodejs
+heroku buildpacks:add https://github.com/heroku/heroku-buildpack-static.git
+git push heroku react-snap:master -f
+heroku ps:scale web=1
+```
+
 ## Load performance optimization
 
 Read more [here](https://github.com/stereobooster/react-snap/blob/master/doc/an-almost-static-stack-optimization.md).
