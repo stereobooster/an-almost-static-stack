@@ -43,8 +43,6 @@
   },
   "reactSnap": {
     "cacheAjaxRequests": true,
-    "inlineCss": true,
-    "http2PushManifest": true,
     "include": ["/shell.html"],
     "puppeteerArgs": ["--no-sandbox", "--disable-setuid-sandbox"]
   },
