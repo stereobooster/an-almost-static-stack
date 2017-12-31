@@ -1,0 +1,11 @@
+{
+  "root": "build/",
+  "headers": {
+      "/service-worker.js": {
+        "Cache-Control": "max-age=0"
+      },
+      "/static/**": {
+        "Cache-Control": "public, max-age=31536000"
+      }
+    }
+}

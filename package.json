@@ -38,12 +38,16 @@
     "generate-appcache": "node scripts/generate-appcache.js",
     "aws-deploy": "node scripts/aws-deploy.js",
     "deploy": "yarn run build && yarn run generate-fb && firebase deploy",
-    "prettier": "prettier --write {*,scripts/*,src/*}.{js,json,css}"
+    "prettier": "prettier --write {*,scripts/*,src/*}.{js,json,css}",
+    "postinstall": "yarn run build"
   },
   "reactSnap": {
     "cacheAjaxRequests": true,
-    "inlineCss": true,
-    "http2PushManifest": true,
-    "include": ["/shell.html"]
+    "include": ["/shell.html"],
+    "puppeteerArgs": ["--no-sandbox", "--disable-setuid-sandbox"]
+  },
+  "engines": {
+    "node": "8.6.0",
+    "yarn": "1.3.2"
   }
 }
