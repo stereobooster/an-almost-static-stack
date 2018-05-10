@@ -7,9 +7,8 @@ import registerServiceWorker from "./registerServiceWorker";
 // import { unregister } from "./registerServiceWorker";
 import { BrowserRouter } from "react-router-dom";
 
-import { loadComponents } from "loadable-components";
+import { loadComponents, getState } from "loadable-components";
 
-import { getState } from "loadable-components/snap";
 window.snapSaveState = () => getState();
 
 const AppWithRouter = (
