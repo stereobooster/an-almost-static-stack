@@ -62,13 +62,13 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build-react": "node scripts/build.js",
-    "build-preact": "node scripts/build-preact.js",
+    "build-preact": "node scripts2/build-preact.js",
     "build": "yarn run build-react && react-snap && yarn run generate-sw && yarn run generate-appcache",
     "test": "node scripts/test.js --env=jsdom",
-    "generate-fb": "node scripts/add-push-headers.js",
-    "generate-sw": "sw-precache --root=build --config scripts/sw-precache-config.js && uglifyjs build/service-worker.js -o build/service-worker.js",
-    "generate-appcache": "node scripts/generate-appcache.js",
-    "aws-deploy": "node scripts/aws-deploy.js",
+    "generate-fb": "node scripts2/add-push-headers.js",
+    "generate-sw": "sw-precache --root=build --config scripts2/sw-precache-config.js && uglifyjs build/service-worker.js -o build/service-worker.js",
+    "generate-appcache": "node scripts2/generate-appcache.js",
+    "aws-deploy": "node scripts2/aws-deploy.js",
     "deploy": "yarn run build && yarn run generate-fb && firebase deploy",
     "prettier": "prettier --write {*,scripts/*,src/*}.{js,json,css}"
   },
@@ -76,6 +76,14 @@
     "cacheAjaxRequests": true,
     "inlineCss": true,
     "http2PushManifest": true,
+    "minifyHtml": {
+      "collapseBooleanAttributes": true,
+      "collapseWhitespace": true,
+      "decodeEntities": true,
+      "keepClosingSlash": true,
+      "sortAttributes": true,
+      "sortClassName": false
+    },
     "include": [
       "/shell.html"
     ]
