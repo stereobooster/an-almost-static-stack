@@ -1,6 +1,6 @@
 ![An Almost Static Stack](https://i.imgur.com/NStGYap.jpg)
 
-# Discalimaer
+# Disclaimer
 
 This is my "training" repository. I put here every trick that is possible. It doesn't mean you should do the same. Be reasonable use only those techniques that you understand.
 
