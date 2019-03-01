@@ -8,16 +8,16 @@ import NavLink from "./components/NavLink";
 import loadable from "loadable-components";
 
 const Home = loadable(() => import("./views/Home"), {
-  LoadingComponent: () => null
+  modules: ["./views/Home"]
 });
 const About = loadable(() => import("./views/About"), {
-  LoadingComponent: () => null
+  modules: ["./views/About"]
 });
 const Countries = loadable(() => import("./views/Countries"), {
-  LoadingComponent: () => null
+  modules: ["./views/Countries"]
 });
 const NoMatch = loadable(() => import("./views/NoMatch"), {
-  LoadingComponent: () => null
+  modules: ["./views/NoMatch"]
 });
 
 const title = "You Are Doing Great";
