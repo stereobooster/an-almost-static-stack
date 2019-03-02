@@ -15,6 +15,7 @@ build
 npm-debug.log
 
 .firebaserc
+.firebase
 firebase-debug.log
 scripts/cache
 yarn-error.log
