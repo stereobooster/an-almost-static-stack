@@ -6,43 +6,41 @@ import Title from "./components/Title";
 import Nav from "./components/Nav";
 import NavLink from "./components/NavLink";
 
-import { PrerenderedComponent } from "react-prerendered-component";
 import loadable from "@loadable/component";
+import { PrerenderedComponent } from "react-prerendered-component";
 
-const Home = loadable(() => import("./views/Home"));
-const About = loadable(() => import("./views/About"));
-const Countries = loadable(() => import("./views/Countries"));
-const NoMatch = loadable(() => import("./views/NoMatch"));
+const prerenderedLoadable = dynamicImport => {
+  const LoadableComponent = loadable(dynamicImport);
+  // we can use React.memo here, but react-router complains
+  return props => (
+    <PrerenderedComponent live={() => LoadableComponent.load()}>
+      <LoadableComponent {...props} />
+    </PrerenderedComponent>
+  );
+};
+
+const Home = prerenderedLoadable(() => import("./views/Home"));
+const About = prerenderedLoadable(() => import("./views/About"));
+const Countries = prerenderedLoadable(() => import("./views/Countries"));
+const NoMatch = prerenderedLoadable(() => import("./views/NoMatch"));
 
 const title = "You Are Doing Great";
 const routes = [
   {
     title: "Home",
     path: "/",
-    component: () => (
-      <PrerenderedComponent live={Home.load()}>
-        <Home />
-      </PrerenderedComponent>
-    ),
+    component: Home,
     exact: true
   },
   {
     title: "About",
     path: "/about/",
-    component: () => (
-      <PrerenderedComponent live={About.load()}>
-        <About />
-      </PrerenderedComponent>
-    )
+    component: About
   },
   {
     title: "Countries",
     path: "/countries/",
-    component: () => (
-      <PrerenderedComponent live={Countries.load()}>
-        <Countries />
-      </PrerenderedComponent>
-    )
+    component: Countries
   }
 ];
 
