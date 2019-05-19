@@ -11,12 +11,11 @@ import { PrerenderedComponent } from "react-prerendered-component";
 
 const prerenderedLoadable = dynamicImport => {
   const LoadableComponent = loadable(dynamicImport);
-  // we can use React.memo here, but react-router complains
-  return props => (
+  return React.memo(props => (
     <PrerenderedComponent live={() => LoadableComponent.load()}>
       <LoadableComponent {...props} />
     </PrerenderedComponent>
-  );
+  ));
 };
 
 const Home = prerenderedLoadable(() => import("./views/Home"));
