@@ -1,6 +1,5 @@
 import React from "react";
 import { hydrate, render } from "react-dom";
-// import { render } from 'react-dom';
 import App from "./App";
 import "./index.css";
 // import registerServiceWorker from "./registerServiceWorker";
@@ -14,11 +13,11 @@ const AppWithRouter = (
 );
 
 const rootElement = document.getElementById("root");
+if (rootElement.hasChildNodes()) {
+  hydrate(AppWithRouter, rootElement);
+} else {
+  render(AppWithRouter, rootElement);
+}
 
-loadComponents()
-  .then(() => hydrate(AppWithRouter, rootElement))
-  .catch(() => render(AppWithRouter, rootElement));
-
-// render(<App />, rootElement);
 // registerServiceWorker();
 unregister();

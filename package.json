@@ -16,7 +16,6 @@
   "dependencies": {
     "@loadable/component": "^5.10.1",
     "appcache-nanny": "^1.1.0",
-    "loadable-components": "^2.2.3",
     "preact": "^8.4.2",
     "preact-compat": "^3.18.4",
     "react": "^16.8.3",
