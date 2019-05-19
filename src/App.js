@@ -5,38 +5,44 @@ import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
 import Nav from "./components/Nav";
 import NavLink from "./components/NavLink";
-import loadable from "loadable-components";
 
-const Home = loadable(() => import("./views/Home"), {
-  LoadingComponent: () => null
-});
-const About = loadable(() => import("./views/About"), {
-  LoadingComponent: () => null
-});
-const Countries = loadable(() => import("./views/Countries"), {
-  LoadingComponent: () => null
-});
-const NoMatch = loadable(() => import("./views/NoMatch"), {
-  LoadingComponent: () => null
-});
+import { PrerenderedComponent } from "react-prerendered-component";
+import loadable from "@loadable/component";
+
+const Home = loadable(() => import("./views/Home"));
+const About = loadable(() => import("./views/About"));
+const Countries = loadable(() => import("./views/Countries"));
+const NoMatch = loadable(() => import("./views/NoMatch"));
 
 const title = "You Are Doing Great";
 const routes = [
   {
     title: "Home",
     path: "/",
-    component: Home,
+    component: () => (
+      <PrerenderedComponent live={Home.load()}>
+        <Home />
+      </PrerenderedComponent>
+    ),
     exact: true
   },
   {
     title: "About",
     path: "/about/",
-    component: About
+    component: () => (
+      <PrerenderedComponent live={About.load()}>
+        <About />
+      </PrerenderedComponent>
+    )
   },
   {
     title: "Countries",
     path: "/countries/",
-    component: Countries
+    component: () => (
+      <PrerenderedComponent live={Countries.load()}>
+        <Countries />
+      </PrerenderedComponent>
+    )
   }
 ];
 
@@ -91,7 +97,9 @@ class App extends Component {
           ))}
         </Nav>
         <Switch>
-          {routes.map((route, i) => <Route key={i} {...route} />)}
+          {routes.map((route, i) => (
+            <Route key={i} {...route} />
+          ))}
           <Route
             key={"/shell.html"}
             path="/shell.html"

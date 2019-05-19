@@ -3,38 +3,38 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
-    "highland": "^2.11.1",
-    "level": "^2.0.1",
-    "prettier": "^1.8.2",
-    "react-scripts": "^1.0.17",
-    "react-snap": "^1.15.0",
-    "readdirp": "^2.1.0",
+    "highland": "^2.13.3",
+    "level": "^4.0.0",
+    "prettier": "^1.16.4",
+    "react-scripts": "^2.1.5",
+    "react-snap": "^1.23.0",
+    "readdirp": "^2.2.1",
     "s3-sync-aws": "^1.1.1",
-    "sw-precache": "^5.2.0",
+    "sw-precache": "^5.2.1",
     "uglifyjs": "^2.4.11"
   },
   "dependencies": {
+    "@loadable/component": "^5.10.1",
     "appcache-nanny": "^1.1.0",
-    "loadable-components": "^0.4.0",
-    "preact": "^8.2.6",
-    "preact-compat": "^3.17.0",
-    "react": "^16.1.1",
-    "react-dom": "^16.1.1",
+    "loadable-components": "^2.2.3",
+    "preact": "^8.4.2",
+    "preact-compat": "^3.18.4",
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3",
     "react-helmet": "^5.2.0",
-    "react-router-dom": "^4.2.2",
+    "react-prerendered-component": "^1.2.2",
+    "react-router-dom": "^4.3.1",
     "styled-components": "^2.2.3"
   },
   "scripts": {
     "start": "react-scripts start",
     "build-react": "react-scripts build",
     "build-preact": "node scripts/build-preact.js",
-    "build":
-      "yarn run build-react && react-snap && yarn run generate-sw && yarn run generate-appcache",
+    "build": "yarn run build-react && react-snap && yarn run generate-sw && yarn run generate-appcache",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "generate-fb": "node scripts/add-push-headers.js",
-    "generate-sw":
-      "sw-precache --root=build --config scripts/sw-precache-config.js && uglifyjs build/service-worker.js -o build/service-worker.js",
+    "generate-sw": "sw-precache --root=build --config scripts/sw-precache-config.js && uglifyjs build/service-worker.js -o build/service-worker.js",
     "generate-appcache": "node scripts/generate-appcache.js",
     "aws-deploy": "node scripts/aws-deploy.js",
     "deploy": "yarn run build && yarn run generate-fb && firebase deploy",
@@ -44,6 +44,14 @@
     "cacheAjaxRequests": true,
     "inlineCss": true,
     "http2PushManifest": true,
-    "include": ["/shell.html"]
-  }
+    "include": [
+      "/shell.html"
+    ]
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
