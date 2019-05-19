@@ -7,9 +7,6 @@ import "./index.css";
 import { unregister } from "./registerServiceWorker";
 import { BrowserRouter } from "react-router-dom";
 
-import { loadComponents, getState } from "loadable-components";
-window.snapSaveState = () => getState();
-
 const AppWithRouter = (
   <BrowserRouter>
     <App />
