@@ -12,7 +12,7 @@ import { PrerenderedComponent } from "react-prerendered-component";
 const prerenderedLoadable = dynamicImport => {
   const LoadableComponent = loadable(dynamicImport);
   return React.memo(props => (
-    <PrerenderedComponent live={() => LoadableComponent.load()}>
+    <PrerenderedComponent live={LoadableComponent.load()}>
       <LoadableComponent {...props} />
     </PrerenderedComponent>
   ));
